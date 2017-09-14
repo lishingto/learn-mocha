@@ -8,8 +8,8 @@ describe('Cash Register', function(){
       assert.equal(typeof C.getChange, 'function');
     });
 
-    it('getChange(210,300) should equal [50,20,20]', function(){
-        assert.deepEqual(C.getChange(210,300), [50, 20, 20]);
+    it('getChange(220,310) should equal [50,20,20]', function(){
+        assert.deepEqual(C.getChange(220,310), [50, 20, 20]);
     }); // use .deepEqual for arrays see: http://stackoverflow.com/questions/13225274/
 
     it('getChange(486,1000) should equal [500, 10, 2, 2]', function(){
