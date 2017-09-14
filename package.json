@@ -7,12 +7,15 @@
   "description": "Personal fork for self study purposes only",
   "version": "1.0.1",
   "devDependencies": {
-    "mocha": "^2.2.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2016": "^6.24.1",
+    "codeclimate-test-reporter": "^0.0.4",
     "istanbul": "^0.3.17",
-    "codeclimate-test-reporter": "^0.0.4"
+    "mocha": "^2.2.5"
   },
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha",
+    "build": "./node_modules/.bin/babel-node cash.js",
+    "test": "npm run build && node ./node_modules/mocha/bin/mocha",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=8138682931f34a05f1829d6c49d791a097e820489d6f98d3d0c0d829c5612585 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info"
   },

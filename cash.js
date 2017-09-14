@@ -39,4 +39,4 @@ const C = {
   }
 };
 
-module.exports = C;
+export default C;
