@@ -5,7 +5,7 @@
     "url": "https://github.com/lishingto/learn-mocha"
   },
   "description": "Personal fork for self study purposes only",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {
     "mocha": "^2.2.5",
     "istanbul": "^0.3.17",
