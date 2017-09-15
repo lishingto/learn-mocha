@@ -11,7 +11,7 @@ const C = {
    * @returns {Array} [500,20,5] the array equivalent of the change
    */
 
-  getChange : function (totalPayable, cashPaid) {
+  getChange : (totalPayable, cashPaid) => {
       'use strict';
       if(isNaN(totalPayable) || isNaN(cashPaid)) {
         throw new Error("totalPayable and cashPaid MUST both be numbers");
@@ -36,7 +36,7 @@ const C = {
           }
       }
       // console.log(change); // print change array to console for feedback
-      return change
+      return change;
   }
 };
 
