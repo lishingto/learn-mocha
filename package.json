@@ -8,16 +8,22 @@
   "version": "1.0.1",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-es2016": "^6.24.1",
     "codeclimate-test-reporter": "^0.0.4",
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "build": "./node_modules/.bin/babel-node cash.js",
-    "test": "npm run build && node ./node_modules/mocha/bin/mocha",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
+    "compile": "babel cash.js -d ./dist",
+    "test": "mocha --require babel-polyfill --compilers js:babel-register",
+    "coverage": "istanbul cover mocha -- -R spec",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=8138682931f34a05f1829d6c49d791a097e820489d6f98d3d0c0d829c5612585 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info"
+  },
+  "babel": {
+    "presets": [
+      "es2016"
+    ]
   },
   "author": "nelsonic <nodecoder@gmail.com> (https://github.com/nelsonic), Li Shing To <lishingto@gmail.com>",
   "license": "ISC",

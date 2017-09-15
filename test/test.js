@@ -1,5 +1,5 @@
-var assert = require('assert');
-var C = require('../cash.js');  // our module
+import assert from 'assert';
+import * as C from '../cash.js';  // our module
 
 describe('Cash Register', function(){
   describe('Module C', function(){
