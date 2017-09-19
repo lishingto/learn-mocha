@@ -24,8 +24,8 @@ describe('Cash Register', function(){
         assert.deepEqual(C.getChange(888,888), [ ]);
     });
 
-    it('getChange(666,666) should equal []', function(){
-        assert.deepEqual(C.getChange(666,666), [ ]);
+    it('getChange(444,444) should equal []', function(){
+        assert.deepEqual(C.getChange(444,444), [ ]);
     });
 
     // try to force an error:
