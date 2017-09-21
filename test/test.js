@@ -20,6 +20,10 @@ describe('Cash Register', function(){
         assert.deepEqual(C.getChange(1487,10000), [5000, 2000, 1000, 500, 10, 2, 1 ]);
     });
 
+    it('getChange(300,330) should equal [20, 10 ]', function(){
+        assert.deepEqual(C.getChange(300,330), [20, 10 ]);
+    });
+
     // try to force an error:
     it('getChange("random","str") to throw error', function(){
         assert.throws(function(){C.getChange("random","str")}, Error, "totalPayable and cashPaid MUST both be numbers");
